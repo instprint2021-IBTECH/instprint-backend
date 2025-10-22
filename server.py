@@ -11,8 +11,9 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # allow cross-origin requests from your app during development
 
-RAZORPAY_KEY_ID = os.getenv("rzp_live_RW8R04O16cSogc")
-RAZORPAY_SECRET = os.getenv("WeQYrazO4D4kbX7hzwdPpIYn")
+RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
+RAZORPAY_SECRET = os.getenv("RAZORPAY_SECRET")
+
 
 if not (RAZORPAY_KEY_ID and RAZORPAY_SECRET):
     raise Exception("Set RAZORPAY_KEY_ID and RAZORPAY_SECRET environment variables")
